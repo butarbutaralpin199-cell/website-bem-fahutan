@@ -1,0 +1,193 @@
+/* Styling Khusus Halaman Kontak */
+.contact-page {
+    background-color: #0d2a4a; /* Warna biru gelap sesuai gambar */
+    margin: 0;
+    padding: 0;
+}
+
+.contact-section {
+    padding-top: 50px;
+    padding-bottom: 80px;
+}
+
+.contact-header-title {
+    color: white;
+    text-align: center;
+    font-size: 2.5rem;
+    font-style: italic;
+    margin-bottom: 40px;
+    font-family: 'Serif', 'Times New Roman', serif;
+}
+
+/* Container Putih Melengkung */
+.contact-container {
+    background-color: white;
+    border-radius: 60px 60px 0 0; /* Membuat lengkungan di atas */
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 80vh;
+}
+
+.contact-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Card Styling */
+.contact-card {
+    background: white;
+    border: 1px solid #ffc107;
+    border-radius: 20px;
+    padding: 30px 20px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+}
+
+.adkesma-card {
+    width: 350px; /* Ukuran khusus untuk card bawah */
+}
+
+.card-icon {
+    font-size: 3rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.contact-card h3 {
+    color: #0d2a4a;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.contact-card p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.contact-info {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Button Styling */
+.btn-contact {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.85rem;
+    transition: background 0.3s;
+}
+
+.btn-contact.wa {
+    background-color: #ffc107; /* Warna kuning sesuai gambar */
+    color: #0d2a4a;
+}
+
+.btn-contact.line {
+    background-color: #ffc107;
+    color: #0d2a4a;
+}
+
+.btn-contact:hover {
+    background-color: #e0a800;
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+    .contact-container {
+        border-radius: 30px 30px 0 0;
+    }
+    .contact-card {
+        width: 100%;
+    }
+}
+
+
+/* Update Background agar lebih modern ala React Bits */
+.contact-page {
+    background: radial-gradient(circle at top right, #1a3a5f, #0d2a4a);
+    min-height: 100vh;
+}
+
+/* Container Putih dengan transparansi halus */
+.contact-container {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 50px 50px 0 0;
+    padding: 80px 20px;
+    margin-top: 40px;
+    box-shadow: 0 -20px 40px rgba(0,0,0,0.2);
+}
+
+/* Kartu Kontak ala React Bits */
+.contact-card {
+    background: #ffffff;
+    border: 1px solid rgba(255, 193, 7, 0.3);
+    border-radius: 24px;
+    padding: 40px 25px;
+    width: 300px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efek Hover: Kartu Terangkat & Glow */
+.contact-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(255, 193, 7, 0.15);
+    border-color: #ffc107;
+}
+
+/* Animasi Icon Mengambang */
+.card-icon {
+    font-size: 3.5rem;
+    color: #0d2a4a;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover .card-icon {
+    transform: scale(1.1) rotate(5deg);
+    color: #ffc107;
+}
+
+/* Button Modern */
+.btn-contact {
+    border: none;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
+}
+
+.btn-contact::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: 0.5s;
+}
+
+.btn-contact:hover::before {
+    left: 100%;
+}

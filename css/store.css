@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+}
+
+/* ================= STORE COMING SOON ================= */
+.store-coming {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background:
+    linear-gradient(
+      rgba(20,60,40,.75),
+      rgba(20,60,40,.75)
+    ),
+    url("../assets/store-bg.jpg"); /* ⬅️ ganti dengan foto merch / hutan */
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+/* OVERLAY ANIMATION */
+.store-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(47,168,102,.25), transparent 70%);
+  animation: overlayMove 8s infinite alternate;
+}
+
+@keyframes overlayMove {
+  from { transform: scale(1); }
+  to   { transform: scale(1.1); }
+}
+
+/* CONTENT */
+.store-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  padding: 0 20px;
+}
+
+/* TITLE */
+.coming-title {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.coming-title span:first-child {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 800;
+  letter-spacing: 8px;
+  animation: fadeUp 1.2s ease forwards;
+}
+
+.coming-title span:last-child {
+  font-size: clamp(4rem, 10vw, 7.5rem);
+  font-weight: 900;
+  letter-spacing: 12px;
+  color: #6bffb5;
+  animation: fadeUp 1.5s ease forwards;
+}
+
+/* DESCRIPTION */
+.coming-desc {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  opacity: .9;
+  animation: fadeUp 1.8s ease forwards;
+}
+
+/* LINE */
+.coming-line {
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, #2fa866, #6bffb5);
+  margin: 30px 0;
+  border-radius: 10px;
+  animation: expandLine 2s ease forwards;
+}
+
+/* NOTE */
+.coming-note {
+  font-size: 1rem;
+  opacity: .85;
+  max-width: 500px;
+  animation: fadeUp 2.1s ease forwards;
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes expandLine {
+  from { width: 0; }
+  to   { width: 120px; }
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .coming-title span:last-child {
+    letter-spacing: 6px;
+  }
+}
+.nav-store {
+  position: relative;
+  z-index: 5; /* cukup, jangan kebesaran */
+}

@@ -1,0 +1,239 @@
+/* ================= PAGE BPH ================= */
+
+.bph-structure {
+  padding: 120px 6%;
+  background: linear-gradient(180deg, #f4fff9, #ffffff);
+}
+
+.bph-title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 800;
+  color: #0f3d2e;
+}
+
+.bph-subtitle {
+  text-align: center;
+  margin-top: 10px;
+  color: #4f6f63;
+}
+
+/* ROW */
+.bph-row {
+  display: grid;
+  gap: 30px;
+  margin-top: 60px;
+}
+
+.bph-row.two {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.bph-row.one {
+  grid-template-columns: 1fr;
+  max-width: 380px;
+  margin-inline: auto;
+}
+
+.bph-row.four {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* CARD */
+.bph-card {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 26px;
+  text-align: center;
+  box-shadow: 0 18px 40px rgba(0,0,0,.15);
+  transition: transform .4s ease, box-shadow .4s ease;
+}
+
+.bph-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 60px rgba(0,0,0,.22);
+}
+
+.bph-card img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #c9e8da;
+  margin-bottom: 18px;
+}
+
+.bph-card h3,
+.bph-card h4 {
+  color: #0f3d2e;
+  font-weight: 700;
+}
+
+.bph-card p,
+.bph-card span {
+  margin-top: 6px;
+  color: #1e7f43;
+  font-weight: 600;
+}
+
+/* LEADER */
+.bph-card.leader {
+  background: linear-gradient(180deg, #1e7f43, #145c32);
+  color: white;
+}
+
+.bph-card.leader h3,
+.bph-card.leader p {
+  color: #ffffff;
+}
+
+.bph-card.leader img {
+  border-color: #f7d774;
+}
+
+/* TUPOKSI */
+.bph-tupoksi {
+  padding: 100px 6%;
+  background: #0f3d2e;
+  color: white;
+}
+
+.bph-tupoksi h2 {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 40px;
+}
+
+.tupoksi-list {
+  max-width: 800px;
+  margin: auto;
+  list-style: none;
+}
+
+.tupoksi-list li {
+  padding: 18px 22px;
+  background: rgba(255,255,255,.1);
+  border-radius: 14px;
+  margin-bottom: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .bph-row.two,
+  .bph-row.four {
+    grid-template-columns: 1fr;
+  }
+}
+/* ================= LEADERS HORIZONTAL ================= */
+.bph-leaders {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+/* CARD UTAMA */
+.leader-horizontal {
+  display: flex;
+  align-items: center;
+  min-height: 320px;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 30px 70px rgba(0,0,0,.25);
+}
+
+/* FOTO */
+.leader-horizontal img {
+  width: 35%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* INFO */
+.leader-info {
+  padding: 50px;
+  color: white;
+}
+
+.leader-info h2 {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: .85;
+}
+
+.leader-info h1 {
+  margin-top: 12px;
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.leader-info p {
+  margin-top: 18px;
+  max-width: 600px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  opacity: .95;
+}
+
+/* WARNA KHUSUS */
+.leader-horizontal.ketua {
+  background: linear-gradient(
+    120deg,
+    #0f3d2e,
+    #1e7f43
+  );
+}
+
+.leader-horizontal.wakil {
+  background: linear-gradient(
+    120deg,
+    #145c32,
+    #2fa866
+  );
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .leader-horizontal {
+    flex-direction: column;
+  }
+
+  .leader-horizontal img {
+    width: 100%;
+    height: 260px;
+  }
+
+  .leader-info h1 {
+    font-size: 2.2rem;
+  }
+}
+/* ================= ARAH FOTO PIMPINAN ================= */
+
+/* default: foto kiri, teks kanan */
+.leader-horizontal {
+  display: flex;
+  align-items: center;
+}
+
+/* reverse: foto kanan, teks kiri */
+.leader-horizontal.reverse {
+  flex-direction: row-reverse;
+}
+
+/* spacing agar teks tetap rapi */
+.leader-horizontal.reverse .leader-info {
+  text-align: left;
+}
+
+/* RESPONSIVE: MOBILE TETAP NORMAL */
+@media (max-width: 900px) {
+  .leader-horizontal,
+  .leader-horizontal.reverse {
+    flex-direction: column;
+  }
+
+  .leader-horizontal.reverse .leader-info {
+    text-align: left;
+  }
+}
